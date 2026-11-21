@@ -1,0 +1,81 @@
+import time
+
+# ==============================
+# PROGRAM PERCAKAPAN PERTEMUAN PERTAMA ALIYA & INDAH
+# ==============================
+
+def garis():
+    print("=" * 50)
+
+def judul(teks):
+    garis()
+    print(teks.center(50))
+    garis()
+    time.sleep(1)
+
+def bicara(nama, pesan):
+    print(f"\n{nama}: {pesan}")
+    time.sleep(1)
+
+def loading():
+    print("\nMemulai cerita", end="")
+    for i in range(3):
+        print(".", end="", flush=True)
+        time.sleep(0.5)
+    print("\n")
+
+# INPUT IDENTITAS
+judul("PROGRAM PERCAKAPAN MAHASISWA UNIBA")
+
+print("Masukkan identitas kedua mahasiswa terlebih dahulu.\n")
+
+aliya = input("Masukkan nama mahasiswa pertama: ")
+indah = input("Masukkan nama mahasiswa kedua: ")
+
+print("\nData mahasiswa berhasil dimasukkan!")
+
+loading()
+
+# DATA MAHASISWA
+judul("IDENTITAS MAHASISWA")
+
+print(f"Nama Mahasiswa 1 : {aliya}")
+print(f"Nama Mahasiswa 2 : {indah}")
+print("Kampus           : Universitas Bina Bangsa")
+print("Program Studi    : Sistem Informasi")
+
+loading()
+
+# BAGIAN 1: PERTEMUAN
+judul("PERTEMUAN PERTAMA DI KAMPUS UNIBA")
+
+print("\nLokasi: Area kampus UNIBA")
+time.sleep(1)
+
+bicara(aliya, "Hai, permisi. Kamu mahasiswa baru di sini juga?")
+bicara(indah, "Hai, iya. Aku sedang mencari ruang kelas Sistem Informasi.")
+bicara(aliya, "Wah, kebetulan! Aku juga dari Prodi Sistem Informasi.")
+bicara(indah, "Serius? Berarti kita satu jurusan dong.")
+bicara(aliya, "Iya. Kenalin, namaku " + aliya + ".")
+bicara(indah, "Aku " + indah + ". Salam kenal ya!")
+bicara(aliya, "Salam kenal juga. Kamu asalnya dari mana?")
+bicara(indah, "Aku dari Balaraja. Kalau kamu?")
+bicara(aliya, "Aku juga dari Balaraja!")
+bicara(indah, "Wah, ternyata kita satu daerah.")
+bicara(aliya, "Iya, senang banget bisa kenal teman baru.")
+
+
+judul("SELESAI PERKULIAHAN")
+
+bicara(aliya, "Akhirnya perkuliahan hari ini selesai juga.")
+bicara(indah, "Iya, ternyata cukup melelahkan.")
+bicara(aliya, "Kamu pulang naik apa?")
+bicara(indah, "Aku rencananya naik bus. Kalau kamu?")
+bicara(aliya, "Aku juga naik bus menuju Balaraja.")
+bicara(indah, "Wah, sama! Bagaimana kalau kita pulang bersama?")
+bicara(aliya, "Boleh banget. Jadi ada teman perjalanan.")
+
+
+garis()
+print("PROGRAM SELESAI".center(50))
+garis()
